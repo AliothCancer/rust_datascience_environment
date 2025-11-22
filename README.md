@@ -26,17 +26,17 @@ This environment leverages the modern Rust Data Science ecosystem. All versions 
 
 Since this is a workspace, you can add multiple distinct analysis projects that share the same foundation.
 
-### **1\. Create a New Analysis Project**
+### **1. Create a New Analysis Project**
 
 To start a new experiment (e.g., market\_analysis), run:
 
 ```bash
-cargo new market\_analysis
+cargo new market_analysis
 ```
 
 Then, add it to the members list in the root Cargo.toml.
 
-### **2\. Inherit Dependencies**
+### **2. Inherit Dependencies**
 
 In your new crate's Cargo.toml, inherit the pre-configured versions:
 
