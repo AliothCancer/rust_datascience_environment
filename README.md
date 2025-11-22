@@ -2,6 +2,8 @@
 
 A modular **Rust Workspace Template** designed for high-performance data analysis and machine learning experiments. This repository serves as a polished starting point, implementing a scalable architecture with pre-configured dependencies and a shared utility library.
 
+
+
 ## **📂 Workspace Structure**
 
 The project is organized as a Cargo Workspace to share dependencies and compilation artifacts efficiently.
@@ -10,6 +12,8 @@ The project is organized as a Cargo Workspace to share dependencies and compilat
 | :---- | :---- | :---- |
 | **file\_utility** | Library | Shared internal logic for filesystem operations and agnostic path handling. |
 | **your\_new\_app** | Binary | *\[Placeholder\]* Your future data analysis crates will live here. |
+
+
 
 ## **🛠️ Tech Stack & Dependencies**
 
@@ -22,9 +26,12 @@ This environment leverages the modern Rust Data Science ecosystem. All versions 
 | [**SciRs2**](https://www.google.com/search?q=https://github.com/scirs/scirs2) | 0.1.0-rc | Scientific computing suite inspired by SciPy. Used for linear algebra, statistics, and optimization algorithms. |
 | [**Plotlars**](https://www.google.com/search?q=https://github.com/plotlars-rs/plotlars) | 0.11.1 | High-level plotting wrapper that integrates seamlessly with Polars for data visualization. |
 
+
+
 ## **🚀 Getting Started**
 
 Since this is a workspace, you can add multiple distinct analysis projects that share the same foundation.
+
 
 ### **1. Create a New Analysis Project**
 
@@ -35,6 +42,8 @@ cargo new market_analysis
 ```
 
 Then, add it to the members list in the root Cargo.toml.
+
+
 
 ### **2. Inherit Dependencies**
 
@@ -49,6 +58,8 @@ file_utility = { workspace = true }
 polars = { workspace = true }  
 clap = { workspace = true }  
 ```
+
+
 ### **3. Run Your App**
 
 Select the specific package to run:
@@ -56,8 +67,9 @@ Select the specific package to run:
 ```
 # Syntax: cargo run -p <package_name>  
 cargo run -p market_analysis
-
 ```
+
+
 ## **⚙️ Development Setup**
 
 In the root cargo project:
