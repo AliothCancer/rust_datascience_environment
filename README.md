@@ -30,11 +30,9 @@ Since this is a workspace, you can add multiple distinct analysis projects that 
 
 To start a new experiment (e.g., market\_analysis), run:
 
-$\\texttt{\\\`\\\`\\\`} \[bash\]$
-
+```bash
 cargo new market\_analysis
-
-$\\texttt{\\\`\\\`\\\`}$
+```
 
 Then, add it to the members list in the root Cargo.toml.
 
@@ -42,32 +40,28 @@ Then, add it to the members list in the root Cargo.toml.
 
 In your new crate's Cargo.toml, inherit the pre-configured versions:
 
-$\\texttt{\\\`\\\`\\\`} \[toml\]$
+```toml
+[dependencies]  
+# Internal  
+file_utility = { workspace = true }
 
-\[dependencies\]  
-\# Internal  
-file\_utility \= { workspace \= true }
-
-\# External  
-polars \= { workspace \= true }  
-clap \= { workspace \= true }  
-$\\texttt{\\\`\\\`\\\`}$
-
-### **3\. Run Your App**
+# External  
+polars = { workspace = true }  
+clap = { workspace = true }  
+```
+### **3. Run Your App**
 
 Select the specific package to run:
 
-$\\texttt{\\\`\\\`\\\`} \[bash\]$
+```
+# Syntax: cargo run -p <package_name>  
+cargo run -p market_analysis
 
-\# Syntax: cargo run \-p \<package\_name\>  
-cargo run \-p market\_analysis\`\`\`
-
-$\\texttt{\\\`\\\`\\\`}$
-
+```
 ## **⚙️ Development Setup**
 
 In the root cargo project:
 
-* **Resolver:** Uses resolver \= "2" for optimal feature isolation between build, dev, and runtime dependencies.  
-* **Optimization:** Dev profile is set to opt-level \= 3 for dependencies.
+* **Resolver:** Uses resolver = "2" for optimal feature isolation between build, dev, and runtime dependencies.  
+* **Optimization:** Dev profile is set to opt-level = 3 for dependencies.
 
