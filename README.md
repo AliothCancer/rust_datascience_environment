@@ -30,11 +30,11 @@ Since this is a workspace, you can add multiple distinct analysis projects that 
 
 To start a new experiment (e.g., market\_analysis), run:
 
-$\\texttt{\\\`\\\`\\\`bash}$
+$\\texttt{\\\`\\\`\\\`} \[bash\]$
 
 cargo new market\_analysis
 
-$\\texttt{\\\`\\\`\\\`bash}$
+$\\texttt{\\\`\\\`\\\`}$
 
 Then, add it to the members list in the root Cargo.toml.
 
@@ -42,7 +42,7 @@ Then, add it to the members list in the root Cargo.toml.
 
 In your new crate's Cargo.toml, inherit the pre-configured versions:
 
-$\\texttt{\\\`\\\`\\\`toml}$
+$\\texttt{\\\`\\\`\\\`} \[toml\]$
 
 \[dependencies\]  
 \# Internal  
@@ -51,18 +51,18 @@ file\_utility \= { workspace \= true }
 \# External  
 polars \= { workspace \= true }  
 clap \= { workspace \= true }  
-$\\texttt{\\\`\\\`\\\`toml}$
+$\\texttt{\\\`\\\`\\\`}$
 
 ### **3\. Run Your App**
 
 Select the specific package to run:
 
-$\\texttt{\\\`\\\`\\\`bash}$
+$\\texttt{\\\`\\\`\\\`} \[bash\]$
 
 \# Syntax: cargo run \-p \<package\_name\>  
 cargo run \-p market\_analysis\`\`\`
 
-$\\texttt{\\\`\\\`\\\`bash}$
+$\\texttt{\\\`\\\`\\\`}$
 
 ## **⚙️ Development Setup**
 
