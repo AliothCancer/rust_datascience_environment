@@ -30,7 +30,11 @@ Since this is a workspace, you can add multiple distinct analysis projects that 
 
 To start a new experiment (e.g., market\_analysis), run:
 
+\`\`\`
+
 cargo new market\_analysis
+
+\`\`\`
 
 Then, add it to the members list in the root Cargo.toml.
 
@@ -38,27 +42,31 @@ Then, add it to the members list in the root Cargo.toml.
 
 In your new crate's Cargo.toml, inherit the pre-configured versions:
 
+\`\`\`
+
 \[dependencies\]  
 \# Internal  
 file\_utility \= { workspace \= true }
 
 \# External  
 polars \= { workspace \= true }  
-clap \= { workspace \= true }
+clap \= { workspace \= true }  
+\`\`\`
 
 ### **3\. Run Your App**
 
 Select the specific package to run:
 
+\`\`\`
+
 \# Syntax: cargo run \-p \<package\_name\>  
-cargo run \-p market\_analysis
+cargo run \-p market\_analysis  
+\`\`\`
 
 ## **⚙️ Development Setup**
 
 * **Resolver:** Uses resolver \= "2" for optimal feature isolation between build, dev, and runtime dependencies.  
-* **Optimization:** Dev profile is set to opt-level \= 3 for dependencies to ensure Polars runs fast even during development.
-
-\<\!-- end list \--\>
+* **Optimization:** Dev profile is set to opt-level \= 3 for dependencies.
 
 \# Cargo.toml configuration snippet  
 \[profile.dev.package."\*"\]  
