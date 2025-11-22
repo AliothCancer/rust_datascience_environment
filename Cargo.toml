@@ -9,6 +9,8 @@ members = [
 # ---------------------------------------------------------
 # CENTRALIZED DEPENDENCIES 
 # ---------------------------------------------------------
+#   Here you can declare the dependencies you want for the
+#   entire workspace
 [workspace.dependencies]
 # Internal crates
 file_utility = { path = "./file_utility" }
